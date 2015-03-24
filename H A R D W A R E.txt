@@ -1,0 +1,18 @@
+Required Components									 Name								 Price			 Website Link
+Motherboard											 MSI B85-G43 Gaming Motherboard		$139			http://www.pccasegear.com/index.php?main_page=product_info&products_id=24893
+CPU									  			 	 Intel Core i5 4590	d				$272			http://www.pccasegear.com/index.php?main_page=product_info&products_id=27549
+RAM								Kingston Hyper X Fury HX318C10FBK2/8 8GB (2x4GB) Black	$99				http://www.pccasegear.com/index.php?main_page=product_info&cPath=186_774&products_id=27403
+PSU											Be Quiet! Pure Power L8 600W Power Supply	$99				http://www.pccasegear.com/index.php?main_page=product_info&products_id=27629
+HDD													Seagate Barracuda 2TB ST2000DM001	$109			http://www.pccasegear.com/index.php?main_page=product_info&products_id=19554
+Keyboard				Razer BlackWidow Tournament Edition 2014 Mech Gaming Keyboard	$95				http://www.pccasegear.com/index.php?main_page=product_info&cPath=113_1002&products_id=27431
+Mouse												Razer DeathAdder 2013 Gaming Mouse	$45				http://www.pccasegear.com/index.php?main_page=product_info&products_id=22362&cPath=698
+Monitor										AOC E2070SWN 19.5in Widescreen LED Monitor	$119			http://www.pccasegear.com/index.php?main_page=product_info&cPath=558_1211&products_id=28085
+Computer Case									Be Quiet! Silent Base 800 Case Black 	$149			http://www.pccasegear.com/index.php?main_page=product_info&products_id=29783
+GPU												MSI GeForce GTX 980 Gaming 4GB			$799			http://www.pccasegear.com/index.php?main_page=product_info&products_id=29149
+
+
+
+
+
+
+TOTAL: $0.00
