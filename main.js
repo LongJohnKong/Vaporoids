@@ -29,19 +29,23 @@ var STATE_GAME = 1;
 var STATE_GAMEOVER = 2;
 
 var gameState = STATE_SPLASH;
+var dead = 0
 
 //ALL OUR VARIABLES
 ////////////////////////////////////////////////////////////
 
 
 //player liveliness
-var playeralive = 1
+
 
 
 //Grass Tiles
 var Grass = document.createElement("img");
 var splashBG = document.createElement ("img");
+var endBG = document.createElement ("img");
 
+
+endBG.src = "GO.png"
 Grass.src = "starfiel.gif";
 splashBG.src = "grid2.png";
 
@@ -62,7 +66,7 @@ for (var y = 0; y < 15; y++)
 //Player Values
 var Player = 
 {
-	if playeralive = 1
+	
 	image : document.createElement("img"),
 	x : SCREEN_WIDTH/2,
 	y : SCREEN_HEIGHT/2,
@@ -71,7 +75,9 @@ var Player =
 	directionX: 0,
 	directionY: 0,
 	angularDirection: 0,
-	rotation: 0
+	rotation: 0,
+	life : 1
+
 	
 };
 
@@ -284,6 +290,22 @@ function runSplash(dt)
 
 }
 
+function endGame()
+{
+	
+	if (life < 1)
+	{
+		gameState = STATE_GAMEOVER;
+		return;
+	}
+
+	
+	
+	var TextMeasure = context.measureText(Message);
+	context.drawImage( endBG,
+							 x * 0, y * 0);
+}
+
 function runGame(dt)
 {
 	//updates shoot timer
@@ -318,6 +340,9 @@ function runGame(dt)
 	Player.rotation += Player.angularDirection * PLAYER_TURN_SPEED;
 
 	//draw the player adjusting player origin
+
+	
+
 	context.save();
 		context.translate( Player.x, Player.y);
 		context.rotate(Player.rotation);
@@ -395,8 +420,8 @@ function runGame(dt)
 								Asteroids[j].width, Asteroids[j].height);
 				if (pHit == true)
 				{
-					gameState = STATE_GAMEOVER;
-					
+					life = 0;
+					Asteroids.splice(j,1);
 				}
 			}
 }
