@@ -43,12 +43,13 @@ var dead = 0
 var Grass = document.createElement("img");
 var splashBG = document.createElement ("img");
 var endBG = document.createElement ("img");
+var gameover = document.createElement ("img");
 
 
 endBG.src = "GO.png"
 Grass.src = "starfiel.gif";
 splashBG.src = "grid2.png";
-
+gameover.src = "cf.png"
 
 var Background = [];
 
@@ -411,6 +412,8 @@ function runGame(dt)
 		}
 	}
 
+	
+			//Player hitting asteroid?
 	for (var j = 0; j < Asteroids.length; j++)
 			{
 				var pHit = intersects(
@@ -420,7 +423,7 @@ function runGame(dt)
 								Asteroids[j].width, Asteroids[j].height);
 				if (pHit == true)
 				{
-					life = 0;
+					gameState = STATE_GAMEOVER;
 					Asteroids.splice(j,1);
 				}
 			}
@@ -430,7 +433,18 @@ function runGame(dt)
 
 function runEnd(dt)
 {
-
+	var Message = "G A M E  O V E R";
+	
+	var TextMeasure = context.measureText(Message);
+	context.drawImage( gameover,
+							   x * 0, y * 0);
+	context.fillStyle = "#000";
+	context.font = "32px Arial";
+	context.fillText(Message, SCREEN_WIDTH/2 - (TextMeasure.width/2), SCREEN_HEIGHT/2);
+	
+	context.fillStyle = "#f00";
+	context.font = "32px Arial";
+	context.fillText(Message, SCREEN_WIDTH/2 - (TextMeasure.width/2+2), SCREEN_HEIGHT/2+2);
 }
 
 //callback function to run each frame
